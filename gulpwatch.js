@@ -1,10 +1,7 @@
 const gulp = require('gulp')
 const less = require('gulp-less')
 const rename = require('gulp-rename')
-const cleanCSS = require('gulp-clean-css')
 const postcss = require('gulp-postcss')
-
-const watch = require('./gulpwatch')
 
 const lessPath = 'less/index.less'
 
@@ -13,11 +10,12 @@ function styles() {
     .src(lessPath)
     .pipe(less())
     .pipe(postcss([require('autoprefixer')]))
-    .pipe(cleanCSS())
     .pipe(rename('index.css'))
     .pipe(gulp.dest('./'))
 }
 
-exports.watch = watch
+module.exports = () => {
+  styles()
+  gulp.watch(['./less/**/*.less'], styles)
+}
 
-exports.default = styles

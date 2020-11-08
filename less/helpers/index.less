@@ -1,0 +1,25 @@
+@import "./one-px.less";
+@import "./triangle.less";
+@import "./balloon.less";
+@import './cover.less';
+
+// 超出隐藏
+.ellipsis {
+  .ellipsis(1);
+}
+// 隐藏
+.hidden, [hidden] {
+  display: none !important;
+}
+// 清除浮动
+.clearfix:after {
+  content: "";
+  display: block;
+  height: 0;
+  clear: both;
+  visibility: hidden;
+  overflow: hidden;
+}
+.pointer {
+  cursor: pointer;
+}

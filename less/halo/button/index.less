@@ -1,0 +1,46 @@
+@import './button-core.less';
+
+.h-button-hover,
+.h-button:hover,
+.h-button:focus {
+  background-image: linear-gradient(transparent, rgba(0,0,0, 0.05) 40%, rgba(0,0,0, 0.10));
+}
+
+.h-button:focus {
+  outline: 0;
+}
+.h-button-active,
+.h-button:active {
+  box-shadow: 0 0 0 1px rgba(0,0,0, 0.05) inset, 0 0 6px rgba(0,0,0, 0.2) inset;
+  border-color: #000;
+}
+
+.h-button[disabled],
+.h-button-disabled,
+.h-button-disabled:hover,
+.h-button-disabled:focus,
+.h-button-disabled:active {
+  border: none;
+  background-image: none;
+  opacity: 0.40;
+  cursor: not-allowed;
+  box-shadow: none;
+  pointer-events: none;
+}
+
+.h-button-primary {
+  background-color: @color-primary;
+  color: #fff;
+}
+.h-button-success {
+  background-color: @color-success;
+  color: #fff;
+}
+.h-button-error {
+  background-color: @color-error;
+  color: #fff;
+}
+.h-button-warning {
+  background-color: @color-warning;
+  color: #fff;
+}

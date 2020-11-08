@@ -4,7 +4,7 @@
   "description": "重置样式，常用css，常用animate.css",
   "main": "index.css",
   "scripts": {
-    "dev": "vue serve ./website/index.vue",
+    "dev": "gulp watch",
     "build": "gulp",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
@@ -12,15 +12,11 @@
     "type": "git",
     "url": "git+https://github.com/halobear/css.git"
   },
-  "gitHooks": {
-    "commit-msg": "node verifyCommitMsg.js"
-  },
   "keywords": [
     "css"
   ],
   "files": [
     "less",
-    "scss",
     "postcss.config.js",
     "index.css"
   ],
@@ -39,8 +35,7 @@
     "gulp-less": "^4.0.1",
     "gulp-postcss": "^8.0.0",
     "gulp-rename": "^1.4.0",
-    "less-loader": "^5.0.0",
-    "yorkie": "^2.0.0"
+    "less-loader": "^5.0.0"
   },
   "browserslist": [
     "> 1%",
