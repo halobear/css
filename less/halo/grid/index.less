@@ -1,0 +1,55 @@
+@import '../../variable.less';
+
+.h-container {
+  width: 96%;
+  margin: 0 auto;
+} 
+.h-row {
+  display: flex;
+  flex-flow: row wrap;
+  justify-content: flex-start;
+  &.reverse {
+    flex-direction: row-reverse;
+  }
+}
+
+.h-col {
+  flex: 1;
+  box-sizing: border-box;
+}
+
+[class*=" h-col-"],
+[class^='h-col-'] {
+  width: 100%;
+  box-sizing: border-box;
+}
+
+.make-col-loop(@type: '', @i: 1, @n:12) when (@i <= @n){
+  @col-name: ~"h-col@{type}";
+  .@{col-name}-@{i}{
+    flex: 0 0 @i/@n*100%;
+  }
+  .make-col-loop(@type, (@i + 1), @n);
+}
+
+.make-col-loop();
+
+
+@media screen and (max-width: @sm - 0.2) {
+  .h-container {
+    width: 100%;
+  }
+  .make-col-loop('-xs');
+}
+
+@media screen and (min-width: @sm) {
+  .make-col-loop('-sm');
+}
+
+@media screen and (min-width: @md) {
+  .make-col-loop('-md');
+}
+
+@media screen and (min-width: @lg) {
+  .make-col-loop('-lg');
+}

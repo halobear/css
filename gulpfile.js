@@ -6,16 +6,26 @@ const postcss = require('gulp-postcss')
 
 const watch = require('./gulpwatch')
 
-const lessPath = 'less/index.less'
+// const basePath = 'less/base.less'
+// const haloPath = 'less/halo.less'
+const gridPath = 'less/halo/grid/index.less'
+const allPath = 'less/index.less'
 
-function styles() {
+function buildLess(filePath, name = 'index') {
   return gulp
-    .src(lessPath)
+    .src(filePath)
     .pipe(less())
     .pipe(postcss([require('autoprefixer')]))
     .pipe(cleanCSS())
-    .pipe(rename('index.css'))
+    .pipe(rename(`${name}.css`))
     .pipe(gulp.dest('./'))
+}
+
+async function styles() {
+  // await buildLess(basePath, 'base')
+  // await buildLess(haloPath, 'halo')
+  await buildLess(gridPath, 'grid')
+  await buildLess(allPath, 'index')
 }
 
 exports.watch = watch

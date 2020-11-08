@@ -18,7 +18,8 @@
   "files": [
     "less",
     "postcss.config.js",
-    "index.css"
+    "index.css",
+    "grid.css"
   ],
   "author": "luzhongk@126.com",
   "license": "ISC",
