@@ -759,7 +759,7 @@ a:focus {
   -webkit-box-sizing: border-box;
           box-sizing: border-box;
   font-size: 100%;
-  padding: 0.3em 1em;
+  padding: 0.5em 1em;
   border: none rgba(0, 0, 0, 0);
   background-color: #E6E6E6;
   text-decoration: none;
@@ -838,28 +838,30 @@ a:focus {
   background-color: #df7514;
   color: #fff;
 }
-.k-input {
+.h-input {
   border: 1px solid #d9d9d9;
+  padding: 0.5em 0.6em;
+  display: inline-block;
   border-radius: 4px;
-  padding: 8px 12px;
-  width: 100%;
+  vertical-align: middle;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
   -webkit-appearance: none;
      -moz-appearance: none;
           appearance: none;
   outline: none;
-  -webkit-box-sizing: border-box;
-          box-sizing: border-box;
-  font-size: 16px;
+  font-size: 100%;
 }
-.k-input::-webkit-input-placeholder {
+.h-input::-webkit-input-placeholder {
   color: #ccc;
 }
-.k-input:focus {
-  border-color: #40a9ff;
-  -webkit-box-shadow: 0 0 0 2px rgba(24, 144, 255, 0.2);
-          box-shadow: 0 0 0 2px rgba(24, 144, 255, 0.2);
+.h-input:focus,
+.h-input .h-input-active {
+  border-color: #0078e7;
+  -webkit-box-shadow: 0 0 0 1px rgba(24, 144, 255, 0.2);
+          box-shadow: 0 0 0 1px rgba(24, 144, 255, 0.2);
 }
-.k-switch {
+.h-switch {
   -webkit-appearance: none;
   position: relative;
   width: 52px;
@@ -873,7 +875,7 @@ a:focus {
   -webkit-transition: background-color 0.1s, border 0.1s;
   transition: background-color 0.1s, border 0.1s;
 }
-.k-switch::after {
+.h-switch::after {
   content: " ";
   position: absolute;
   top: 0;
@@ -889,11 +891,11 @@ a:focus {
   transition: transform 0.35s cubic-bezier(0.4, 0.4, 0.25, 1.35);
   transition: transform 0.35s cubic-bezier(0.4, 0.4, 0.25, 1.35), -webkit-transform 0.35s cubic-bezier(0.4, 0.4, 0.25, 1.35);
 }
-.k-switch:checked {
+.h-switch:checked {
   border: 1px solid #0078e7;
   background: #0078e7;
 }
-.k-switch:checked::after {
+.h-switch:checked::after {
   -webkit-transform: translateX(20px);
           transform: translateX(20px);
 }

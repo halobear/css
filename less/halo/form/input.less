@@ -1,0 +1,21 @@
+@import '../../variable.less';
+
+// input
+.h-input {
+  border: 1px solid @color-border;
+  padding: 0.5em 0.6em;
+  display: inline-block;
+  border-radius: 4px;
+  vertical-align: middle;
+  box-sizing: border-box;
+  appearance: none;
+  outline: none;
+  font-size: 100%;
+  &::-webkit-input-placeholder {
+    color: #ccc;
+  }
+  &:focus, .h-input-active {
+    border-color: @color-primary;
+    box-shadow: 0 0 0 1px rgba(24, 144, 255, 0.2);
+  }
+}
