@@ -6,8 +6,7 @@ const postcss = require('gulp-postcss')
 
 const watch = require('./gulpwatch')
 
-// const basePath = 'less/base.less'
-// const haloPath = 'less/halo.less'
+const haloPath = 'less/halo.less'
 const gridPath = 'less/halo/grid/index.less'
 const allPath = 'less/index.less'
 
@@ -23,7 +22,7 @@ function buildLess(filePath, name = 'index') {
 
 async function styles() {
   // await buildLess(basePath, 'base')
-  // await buildLess(haloPath, 'halo')
+  await buildLess(haloPath, 'halo')
   await buildLess(gridPath, 'grid')
   await buildLess(allPath, 'index')
 }

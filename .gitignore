@@ -21,5 +21,4 @@ yarn-error.log*
 *.sw*
 
 lib
-index.css
-halo.css
+test.css
