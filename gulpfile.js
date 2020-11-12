@@ -8,7 +8,7 @@ const watch = require('./gulpwatch')
 
 const haloPath = 'less/halo.less'
 const gridPath = 'less/halo/grid/index.less'
-const allPath = 'less/index.less'
+const indexPath = 'less/index.less'
 
 function buildLess(filePath, name = 'index') {
   return gulp
@@ -21,10 +21,9 @@ function buildLess(filePath, name = 'index') {
 }
 
 async function styles() {
-  // await buildLess(basePath, 'base')
   await buildLess(haloPath, 'halo')
   await buildLess(gridPath, 'grid')
-  await buildLess(allPath, 'index')
+  await buildLess(indexPath, 'index')
 }
 
 exports.watch = watch
