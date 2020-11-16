@@ -1216,9 +1216,59 @@ iframe {
 .h-close-btn .iconfont {
   font-size: 22px;
 }
+.h-nav-btn {
+  padding: 0;
+  margin: 0;
+  -webkit-appearance: none;
+     -moz-appearance: none;
+          appearance: none;
+  background-color: transparent;
+  background-image: none;
+  width: 20px;
+  height: 16px;
+  opacity: 0.8;
+  position: relative;
+  transition: opacity 0.15s;
+  outline: none;
+  box-sizing: content-box;
+  border: 10px solid transparent;
+}
+.h-nav-btn:active {
+  opacity: 0.6;
+}
+.h-nav-btn > span {
+  background-color: #333;
+  position: absolute;
+  left: 0;
+  width: 100%;
+  height: 2px;
+  transition: 0.4s;
+  transform-origin: 0;
+  border-radius: 2px;
+  transform: rotate(0);
+  opacity: 1;
+}
+.h-nav-btn > span:first-child {
+  top: 0;
+}
+.h-nav-btn > span:nth-child(2) {
+  top: 7px;
+}
+.h-nav-btn > span:nth-child(3) {
+  top: 14px;
+}
+.h-nav-btn.active span:first-child {
+  transform: rotate(45deg);
+}
+.h-nav-btn.active span:nth-child(2) {
+  opacity: 0;
+}
+.h-nav-btn.active span:nth-child(3) {
+  transform: rotate(-45deg);
+}
 .h-input {
   border: 1px solid #dee2e6;
-  padding: 0.5em 0.6em;
+  padding: 0.4em 0.8em;
   display: inline-block;
   border-radius: 4px;
   vertical-align: middle;
@@ -1227,7 +1277,9 @@ iframe {
      -moz-appearance: none;
           appearance: none;
   outline: none;
-  font-size: 100%;
+  font-size: 16px;
+  box-shadow: 0 0 0 0 transparent;
+  transition: box-shadow 0.15s, borer-color 0.15s;
 }
 .h-input::-webkit-input-placeholder {
   color: #ccc;
@@ -1235,7 +1287,7 @@ iframe {
 .h-input:focus,
 .h-input .h-input-active {
   border-color: #0d6efd;
-  box-shadow: 0 0 0 1px rgba(24, 144, 255, 0.2);
+  box-shadow: 0 0 3px #408cfd;
 }
 .h-switch {
   -webkit-appearance: none;

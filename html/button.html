@@ -1,52 +1,63 @@
 <!DOCTYPE html>
 <html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>@halobear/css</title>
+    <link rel="stylesheet" href="./index.css" />
+    <style>
+      h1 {
+        text-align: center;
+      }
+      .h-btn {
+        margin: 0.25em;
+      }
+    </style>
+  </head>
 
-<head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>@halobear/css</title>
-  <link rel="stylesheet" href="./index.css">
-  <style>
-    h1 {
-      text-align: center;
-    }
-    .h-btn {
-      margin: .25em;
-    }
-  </style>
-</head>
+  <body>
+    <h1>@halobear/css</h1>
 
-<body>
-  <h1>@halobear/css</h1>
+    <div class="h-container">
+      <h2>h-btn</h2>
+      <div>
+        <button class="h-btn h-btn-primary">primary</button>
+        <button class="h-btn h-btn-secondary">secondary</button>
+        <button class="h-btn h-btn-success">success</button>
+        <button class="h-btn h-btn-warning">warning</button>
+        <button class="h-btn h-btn-danger">danger</button>
+        <button class="h-btn h-btn-info">info</button>
+        <button class="h-btn">light</button>
+        <button disabled class="h-btn h-btn-primary">disabled</button>
+      </div>
+      <h2>h-outline-btn</h2>
+      <div>
+        <button class="h-btn h-outline-btn-primary">primary</button>
+        <button class="h-btn h-outline-btn-secondary">secondary</button>
+        <button class="h-btn h-outline-btn-success">success</button>
+        <button class="h-btn h-outline-btn-warning">warning</button>
+        <button class="h-btn h-outline-btn-danger">danger</button>
+        <button class="h-btn h-outline-btn-info">info</button>
+        <button disabled class="h-btn h-outline-btn-primary">disabled</button>
+      </div>
 
-  <div class="h-container">
-    <h2>h-btn</h2>
-    <div>
-      <button class="h-btn h-btn-primary">primary</button>
-      <button class="h-btn h-btn-secondary">secondary</button>
-      <button class="h-btn h-btn-success">success</button>
-      <button class="h-btn h-btn-warning">warning</button>
-      <button class="h-btn h-btn-danger">danger</button>
-      <button class="h-btn h-btn-info">info</button>
-      <button class="h-btn">light</button>
-      <button disabled class="h-btn h-btn-primary">disabled</button>
+      <h2>关闭按钮</h2>
+      <button class="h-close-btn">
+        <i class="iconfont icon-close"></i>
+      </button>
+
+      <h2>导航按钮</h2>
+      <button class="h-nav-btn">
+        <span></span>
+        <span></span>
+        <span></span>
+      </button>
     </div>
-    <h2>h-outline-btn</h2>
-    <div>
-      <button class="h-btn h-outline-btn-primary">primary</button>
-      <button class="h-btn h-outline-btn-secondary">secondary</button>
-      <button class="h-btn h-outline-btn-success">success</button>
-      <button class="h-btn h-outline-btn-warning">warning</button>
-      <button class="h-btn h-outline-btn-danger">danger</button>
-      <button class="h-btn h-outline-btn-info">info</button>
-      <button disabled class="h-btn h-outline-btn-primary">disabled</button>
-    </div>
 
-    <h2>关闭按钮</h2>
-    <button class="h-close-btn">
-      <i class="iconfont icon-close"></i>
-    </button>
-  </div>
-</body>
-
+    <script>
+      document.querySelector('.h-nav-btn').onclick = function () {
+        this.classList.toggle('active')
+      }
+    </script>
+  </body>
 </html>

@@ -1,0 +1,50 @@
+.@{halo}nav-btn {
+  padding: 0;
+  margin: 0;
+  appearance: none;
+  background-color: transparent;
+  background-image: none;
+  width: 20px;
+  height: 16px;
+  opacity: 0.8;
+  position: relative;
+  transition: opacity 0.15s;
+  outline: none;
+  box-sizing: content-box;
+  border: 10px solid transparent;
+  &:active {
+    opacity: 0.6;
+  }
+  & > span {
+    background-color: #333;
+    position: absolute;
+    left: 0;
+    width: 100%;
+    height: 2px;
+    transition: 0.4s;
+    transform-origin: 0;
+    border-radius: 2px;
+    transform: rotate(0);
+    opacity: 1;
+    &:first-child {
+      top: 0;
+    }
+    &:nth-child(2) {
+      top: 7px;
+    }
+    &:nth-child(3) {
+      top: 14px;
+    }
+  }
+  &.active {
+    span:first-child {
+      transform: rotate(45deg);
+    }
+    span:nth-child(2) {
+      opacity: 0;
+    }
+    span:nth-child(3) {
+      transform: rotate(-45deg);
+    }
+  }
+}
