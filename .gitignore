@@ -20,5 +20,5 @@ yarn-error.log*
 *.sln
 *.sw*
 
-lib
+dist
 bundle.css

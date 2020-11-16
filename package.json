@@ -2,7 +2,7 @@
   "name": "@halobear/css",
   "version": "2.0.3",
   "description": "重置样式，常用css，常用animate.css",
-  "main": "index.css",
+  "main": "dist/common.css",
   "scripts": {
     "dev": "gulp watch",
     "build": "gulp",
@@ -17,9 +17,8 @@
   ],
   "files": [
     "less",
-    "postcss.config.js",
-    "index.css",
-    "grid.css"
+    "dist",
+    "postcss.config.js"
   ],
   "author": "luzhongk@126.com",
   "license": "ISC",
@@ -37,9 +36,5 @@
     "gulp-postcss": "^8.0.0",
     "gulp-rename": "^1.4.0",
     "less-loader": "^5.0.0"
-  },
-  "browserslist": [
-    "> 1%",
-    "last 2 versions"
-  ]
+  }
 }

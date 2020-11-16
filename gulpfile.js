@@ -4,10 +4,8 @@ const rename = require('gulp-rename')
 const cleanCSS = require('gulp-clean-css')
 const postcss = require('gulp-postcss')
 
-const watch = require('./gulpwatch')
-
-const haloPath = 'less/halo.less'
-const gridPath = 'less/halo/grid/index.less'
+const commonPath = 'less/common.less'
+const gridPath = 'less/grid.less'
 const indexPath = 'less/index.less'
 
 function buildLess(filePath, name = 'index') {
@@ -21,11 +19,22 @@ function buildLess(filePath, name = 'index') {
 }
 
 async function styles() {
-  await buildLess(haloPath, 'halo')
-  await buildLess(gridPath, 'grid')
-  await buildLess(indexPath, 'index')
+  await buildLess(commonPath, 'dist/common')
+  await buildLess(gridPath, 'dist/grid')
+  await buildLess(indexPath, 'dist/index')
 }
 
-exports.watch = watch
+function watch() {
+  return gulp
+    .src(indexPath)
+    .pipe(less())
+    .pipe(postcss([require('autoprefixer')]))
+    .pipe(rename('./html/index.css'))
+    .pipe(gulp.dest('./'))
+}
+
+exports.watch = () => {
+  gulp.watch(['./less/**/*.less'], watch)
+}
 
 exports.default = styles
