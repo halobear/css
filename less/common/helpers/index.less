@@ -1,6 +1,6 @@
-@import "./one-px.less";
-@import "./triangle.less";
-@import "./balloon.less";
+@import './one-px.less';
+@import './triangle.less';
+@import './balloon.less';
 @import './cover.less';
 @import './flex.less';
 @import './responsive.less';
@@ -10,18 +10,20 @@
   .ellipsis(1);
 }
 // 隐藏
-.hidden, [hidden] {
+.hidden,
+[hidden] {
   display: none !important;
 }
 // 清除浮动
 .clearfix:after {
-  content: "";
+  content: '';
   display: block;
   height: 0;
   clear: both;
   visibility: hidden;
   overflow: hidden;
 }
+// 光标小手
 .pointer {
   cursor: pointer;
 }
