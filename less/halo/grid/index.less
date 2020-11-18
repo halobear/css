@@ -15,14 +15,14 @@
   box-sizing: border-box;
 }
 
-[class*=" h-col-"],
-[class^='h-col-'] {
+[class*=" halo-col-"],
+[class^='halo-col-'] {
   width: 100%;
   box-sizing: border-box;
 }
 
 .make-col-loop(@type: '', @i: 1, @n:12) when (@i <= @n){
-  @col-name: ~"h-col@{type}";
+  @col-name: ~"@{halo}col@{type}";
   .@{col-name}-@{i}{
     flex: 0 0 @i/@n*100%;
   }
