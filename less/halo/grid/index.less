@@ -22,7 +22,7 @@
 }
 
 .make-col-loop(@type: '', @i: 1, @n:12) when (@i <= @n){
-  @col-name: ~"@{halo}col@{type}";
+  @col-name: ~".@{halo}col@{type}";
   .@{col-name}-@{i}{
     flex: 0 0 @i/@n*100%;
   }
