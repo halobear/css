@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>@halobear/css</title>
+  <link rel="stylesheet" href="./index.css" />
+  <style>
+    h1 {
+      text-align: center;
+    }
+
+    .halo-container {
+      width: 80%;
+      padding-top: 30px;
+    }
+
+    .box {
+      width: 200px;
+      height: 200px;
+      margin: 30px auto;
+      background-color: red;
+    }
+  </style>
+</head>
+
+<body>
+  <h1>@halobear/css 动画</h1>
+  <div class="halo-container">
+    <button class="halo-btn halo-animate-slide-up">halo-animate-slide-up</button>
+    <button class="halo-btn">halo-animate-slide-down</button>
+    <button class="halo-btn halo-animate-fade-in">halo-animate-fade-in</button>
+    <button class="halo-btn">halo-animate-fade-out</button>
+    <div class="box"></div>
+  </div>
+
+  <script>
+    const btns = [...document.querySelectorAll('button')]
+    const box = document.querySelector('.box')
+    box.addEventListener('animationend', animationend)
+    box.addEventListener('webkitAnimationEnd', animationend)
+    btns.forEach(btn => {
+      btn.onclick = addClass
+    })
+
+    function addClass() {
+      box.classList.add(this.textContent)
+    }
+
+    function animationend() {
+      setTimeout(() => {
+        box.className = 'box'
+      }, 1000)
+    }
+  </script>
+</body>
+
+</html>

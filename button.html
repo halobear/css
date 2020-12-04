@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>@halobear/css</title>
+  <link rel="stylesheet" href="./index.css" />
+  <style>
+    h1 {
+      text-align: center;
+    }
+
+    .halo-container {
+      width: 80%;
+      padding-top: 30px;
+    }
+
+    .halo-btn {
+      margin: 0.25em;
+    }
+  </style>
+</head>
+
+<body>
+  <h1>@halobear/css</h1>
+
+  <div class="halo-container">
+    <h2>halo-btn</h2>
+    <div>
+      <button class="halo-btn halo-btn-primary">primary</button>
+      <button class="halo-btn halo-btn-secondary">secondary</button>
+      <button class="halo-btn halo-btn-success">success</button>
+      <button class="halo-btn halo-btn-warning">warning</button>
+      <button class="halo-btn halo-btn-danger">danger</button>
+      <button class="halo-btn halo-btn-info">info</button>
+      <button class="halo-btn">light</button>
+      <button disabled class="halo-btn halo-btn-primary">disabled</button>
+    </div>
+    <h2>halo-outline-btn</h2>
+    <div>
+      <button class="halo-btn halo-outline-btn-primary">primary</button>
+      <button class="halo-btn halo-outline-btn-secondary">secondary</button>
+      <button class="halo-btn halo-outline-btn-success">success</button>
+      <button class="halo-btn halo-outline-btn-warning">warning</button>
+      <button class="halo-btn halo-outline-btn-danger">danger</button>
+      <button class="halo-btn halo-outline-btn-info">info</button>
+      <button disabled class="halo-btn halo-outline-btn-primary">disabled</button>
+    </div>
+
+    <h2>关闭按钮</h2>
+    <button class="halo-close-btn">
+      <i class="iconfont icon-close"></i>
+    </button>
+
+    <h2>导航按钮</h2>
+    <button class="halo-nav-btn">
+      <span></span>
+      <span></span>
+      <span></span>
+    </button>
+  </div>
+
+  <script>
+    document.querySelector('.halo-nav-btn').onclick = function () {
+      this.classList.toggle('active')
+    }
+  </script>
+</body>
+
+</html>
