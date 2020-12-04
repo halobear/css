@@ -34,6 +34,7 @@ function watch() {
 }
 
 exports.watch = () => {
+  watch()
   gulp.watch(['./less/**/*.less'], watch)
 }
 
