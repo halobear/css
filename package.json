@@ -1,6 +1,6 @@
 {
   "name": "@halobear/css",
-  "version": "3.0.0",
+  "version": "3.0.1",
   "description": "重置样式，常用css",
   "main": "dist/index.css",
   "scripts": {
